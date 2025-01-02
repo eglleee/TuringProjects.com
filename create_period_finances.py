@@ -55,7 +55,8 @@ def delete_income():
 
 
 def check_file():
-    return os.path.exists("current_period.txt")
+    income_exists = os.path.exists("current_period.txt")
+    return income_exists
 
 
 def get_name():
@@ -144,7 +145,12 @@ def write_down_expenses(filename, expense_name, expense_amount):
 def validate_number(number):
     try:
         number = float(number)
-        return round(number, 2)
+        if number >= 0:
+            return round(number, 2)
+        else:
+            print("You should not enter negative values! Try again.")
+            number = None
+            return number
     except ValueError:
         print("You must enter a number! Try again.")
         number = None   

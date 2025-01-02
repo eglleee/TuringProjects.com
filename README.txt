@@ -19,7 +19,7 @@ This is a program that will organize your finances! Every month you can enter yo
 
 1. Clone this repository:
    ```
-   git clone https://github.com/eglleee/TuringProjects.git
+   git clone https://github.com/eglleee/TuringProjects.com.git
    ```
 2. Navigate to the project directory:
    ```
