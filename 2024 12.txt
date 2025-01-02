@@ -1,0 +1,9 @@
+Income:2500.69
+Total fundamental expenses,35.53
+utilities,25.54
+phone,9.99
+Total fun expenses,9.99
+netflix,9.99
+Total savings expenses,1100.0
+investing,100.0
+a car,1000.0

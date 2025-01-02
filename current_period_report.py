@@ -1,6 +1,7 @@
 import recording_period
 import os
 import create_period_finances
+import Main_file
 
 
 def main():
@@ -13,11 +14,11 @@ def main():
     check_expenses("savings")
     savings_expenses = count_total_expenses("savings")
     get_report(income, fundamental_expenses, fun_expenses, savings_expenses)
-
+    Main_file.main()
 
 
 def get_report(income, fundamental_expenses, fun_expenses, savings_expenses):
-    if income == 0:
+    if income == "0.0":
         print("You have no income this month")
         print(f"Your fundamental expenses are {fundamental_expenses} this period.")
         print(f"Your fun expenses are {fun_expenses} this period.")
