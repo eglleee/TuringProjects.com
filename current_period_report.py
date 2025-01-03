@@ -71,5 +71,6 @@ def check_expenses(expense_type):
                 create_period_finances.write_down_expenses(filename, expense_name, expense_amount)
                 break
 
+
 if __name__ == "__main__":
     main()

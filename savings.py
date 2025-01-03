@@ -26,8 +26,7 @@ def monthly_savings():
         print("c) Go back")
         print("d) Add an amount for an existing recurring saving")
     
-    ask_user_about_savings = input("Select: ")
-    what_to_do_with_savings(ask_user_about_savings, current_savings)
+        what_to_do_with_savings(current_savings)
 
     
 def create_new_saving():
@@ -39,35 +38,44 @@ def create_new_saving():
     write_down_saving(saving_info)
 
 
-def what_to_do_with_savings(user_input_for_savings, current_savings):
-    if user_input_for_savings == "a":
-        create_new_saving()
-        monthly_savings()
+def what_to_do_with_savings(current_savings):
+    while True:
+        user_input_for_savings = input("Select: ")
+        if user_input_for_savings == "a":
+            create_new_saving()
+            monthly_savings()
+            break
 
-    elif user_input_for_savings == "b":
-        expense_type = "Savings"
-        filename = "savings_expenses.csv"
-        create_period_finances.get_expense(expense_type, filename)
-        Main_file.main()
+        elif user_input_for_savings == "b":
+            expense_type = "Savings"
+            filename = "savings_expenses.csv"
+            create_period_finances.get_expense(expense_type, filename)
+            Main_file.main()
+            break
 
-    elif user_input_for_savings == "c":
-        Main_file.main()
+        elif user_input_for_savings == "c":
+            Main_file.main()
+            break
 
-    elif user_input_for_savings == "d":
-        print("Which of the existing savings you would like to add to?")       
-        current_savings_lower = []
-        for saving in current_savings:
-            current_savings_lower.append(saving.lower())
-        for current_saving in current_savings:
-            print(current_saving)
-        while True:
-            user_input_for_savings_editing = input("Saving: ").lower().strip()
-            if user_input_for_savings_editing not in current_savings_lower:
-                print("Reccuring saving does not exist. Try again")
-                continue
-            else:
-                savings_functions.change_saved_amount(user_input_for_savings_editing)
-                Main_file.main()
+        elif user_input_for_savings == "d":
+            print("Which of the existing savings you would like to add to?")       
+            current_savings_lower = []
+            for saving in current_savings:
+                current_savings_lower.append(saving.lower())
+            for current_saving in current_savings:
+                print(current_saving)
+            while True:
+                user_input_for_savings_editing = input("Saving: ").lower().strip()
+                if user_input_for_savings_editing not in current_savings_lower:
+                    print("Reccuring saving does not exist. Try again")
+                    continue
+                else:
+                    savings_functions.change_saved_amount(user_input_for_savings_editing)
+                    Main_file.main()
+                    break
+        else:
+            print("You must select one of the options above!")
+            continue
                 
    
 def get_savings_name():

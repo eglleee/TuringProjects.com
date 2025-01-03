@@ -14,40 +14,50 @@ def main():
 
 
 def user_choice():
-    user_choice = input("Select: ").strip().lower()
+    while True:
+        user_choice = input("Select: ").strip().lower()
 
-    if user_choice == "a":
-        if check_file():
-            print("You have already sumbitted you income for this month. Would you like to overwrite it?")
-            while True:
-                create_new_income = input("y/n: ").strip().lower()
-                if create_new_income == "y":
-                    delete_income()
-                    get_name()
-                    get_income()
-                    main()                    
-                    break
-                elif create_new_income == "n":
-                    main()
-                    break
-                else:
-                    print("Enter 'y' for 'YES' or 'n' for 'NO'")
-                    continue
+        if user_choice == "a":
+            if check_file():
+                print("You have already sumbitted you income for this month. Would you like to overwrite it?")
+                while True:
+                    create_new_income = input("y/n: ").strip().lower()
+                    if create_new_income == "y":
+                        delete_income()
+                        get_name()
+                        get_income()
+                        main()                    
+                        break
+                    elif create_new_income == "n":
+                        main()
+                        break
+                    else:
+                        print("Enter 'y' for 'YES' or 'n' for 'NO'")
+                        continue
+            else:
+                get_name()
+                get_income() 
+                main()
+                break  
+                  
+
+        elif user_choice == "b":
+            get_fundamental_expenses()
+            main()
+            break
+        elif user_choice == "c":
+            get_fun_expenses()
+            main()
+            break
+        elif user_choice == "d":
+            savings.main()
+            break
+        elif user_choice == "e":
+            Main_file.main()
+            break
         else:
-            get_name()
-            get_income() 
-            main()           
-
-    elif user_choice == "b":
-        get_fundamental_expenses()
-        main()
-    elif user_choice == "c":
-        get_fun_expenses()
-        main()
-    elif user_choice == "d":
-        savings.main()
-    elif user_choice == "e":
-        Main_file.main()
+            print("You must select one of the options above!")
+            continue
     
 
 def delete_income():
