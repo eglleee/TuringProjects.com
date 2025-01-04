@@ -2,6 +2,8 @@ from pathlib import Path
 import Main_file
 import smtplib
 from email.mime.text import MIMEText
+import passwords
+
 
 def main():
     which_report_to_send()
@@ -24,7 +26,7 @@ def which_report_to_send():
         subject = "Financial report"
         sender = "egletestingpython@gmail.com"
         recipients = "egletestingpython@gmail.com"
-        password = "ixed nqiz qwqk prfc"
+        password = passwords.password
         send_email(subject, body, sender, recipients, password)
 
 
