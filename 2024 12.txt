@@ -1,0 +1,8 @@
+Income:1258.0
+Total fundamental expenses,53.519999999999996
+utilitie,5.54
+phone,47.98
+Total fun expenses,9.99
+netflix,9.99
+Total savings expenses,14.0
+a pc,14.0
