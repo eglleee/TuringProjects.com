@@ -8,8 +8,8 @@ def main():
 
     print("What do you want to do?")
     print("a) Edit new period finances")
-    print("b) Record existing period as finalized")
-    print("c) Get a report of current period")
+    print("b) Get a report of current period")
+    print("c) Record existing period as finalized")
     print("d) Check savings")
     print("f) Exit")
     
@@ -21,11 +21,11 @@ def main():
             create_period_finances.main()
             break
 
-        elif choice == "b":
+        elif choice == "c":
             recording_period.main()
             break
 
-        elif choice == "c":
+        elif choice == "b":
             current_period_report.main()
             break
 
