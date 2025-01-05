@@ -1,0 +1,7 @@
+Income:10000.0
+Total fundamental expenses,54.87
+utilities,54.87
+Total fun expenses,9.99
+netfilex,9.99
+Total savings expenses,1000.0
+a house,1000.0
