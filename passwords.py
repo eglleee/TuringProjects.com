@@ -1,1 +1,1 @@
-password = "password"
+password = "ixed nqiz qwqk prfc"

@@ -3,6 +3,7 @@ import savings
 import sys
 import recording_period
 import current_period_report
+import report_sending
 
 def main():
 
@@ -11,6 +12,7 @@ def main():
     print("b) Get a report of current period")
     print("c) Record existing period as finalized")
     print("d) Check savings")
+    print("e) Receive a report for previous period")
     print("f) Exit")
     
     while True:
@@ -31,6 +33,10 @@ def main():
 
         elif choice == "d":
             savings.main()
+            break
+
+        elif choice == "e":
+            report_sending.main()
             break
 
         elif choice == "f":

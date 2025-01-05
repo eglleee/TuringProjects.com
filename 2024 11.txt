@@ -1,0 +1,7 @@
+Income:4785.98
+Total fundamental expenses,78.98
+utilities,78.98
+Total fun expenses,9.99
+netflix,9.99
+Total savings expenses,1450.0
+investing,1450.0
